@@ -31,14 +31,18 @@ namespace formDesconto
         {
             if (double.TryParse(textBox1.Text, out double value))
             {
-                value = value / 10;
-                // Adiciona 500 ao valor se a primeira CheckBox estiver marcada
+                double valorfinal = value;
                 if (checkBox1.Checked)
                 {
-                    value -= 50;
+                    // CALCULAR PORCENTAGEM!!!!
+                    valorfinal -= (value * 0.2);
+                }
+                if (checkBox2.Checked)
+                {
+                    valorfinal -= (value * 0.1);
                 }
                 // Exibe o resultado no Label
-                label3.Text = "Resultado: " + value.ToString();
+                label3.Text = "Resultado: " + valorfinal.ToString();
             }
             else
             {
@@ -48,6 +52,11 @@ namespace formDesconto
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
 
         }

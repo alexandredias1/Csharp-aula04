@@ -34,6 +34,7 @@
             checkBox1 = new CheckBox();
             label3 = new Label();
             button1 = new Button();
+            checkBox2 = new CheckBox();
             SuspendLayout();
             // 
             // label1
@@ -69,20 +70,21 @@
             // checkBox1
             // 
             checkBox1.AutoSize = true;
+            checkBox1.BackColor = SystemColors.GradientActiveCaption;
             checkBox1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             checkBox1.Location = new Point(288, 192);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(203, 32);
             checkBox1.TabIndex = 3;
             checkBox1.Text = "Fez o curso anterior";
-            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.UseVisualStyleBackColor = false;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(326, 343);
+            label3.Location = new Point(326, 362);
             label3.Name = "label3";
             label3.Size = new Size(118, 32);
             label3.TabIndex = 5;
@@ -92,13 +94,26 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(316, 263);
+            button1.Location = new Point(316, 303);
             button1.Name = "button1";
             button1.Size = new Size(138, 45);
             button1.TabIndex = 6;
             button1.Text = "Calcular";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.BackColor = SystemColors.GradientActiveCaption;
+            checkBox2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBox2.Location = new Point(288, 253);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(190, 32);
+            checkBox2.TabIndex = 7;
+            checkBox2.Text = "Pagamento a vista";
+            checkBox2.UseVisualStyleBackColor = false;
+            checkBox2.CheckedChanged += checkBox2_CheckedChanged;
             // 
             // Form1
             // 
@@ -107,6 +122,7 @@
             BackgroundImage = Properties.Resources.logo_white;
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(800, 450);
+            Controls.Add(checkBox2);
             Controls.Add(button1);
             Controls.Add(label3);
             Controls.Add(checkBox1);
@@ -128,5 +144,6 @@
         private CheckBox checkBox1;
         private Label label3;
         private Button button1;
+        private CheckBox checkBox2;
     }
 }
